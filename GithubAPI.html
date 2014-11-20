@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title> Web Github </title>
+		
+		<!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		
+		</meta >
+	</head>
+	   <body>
+      <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+          <h1> Web Github </h1>
+        </div>
+		
+		<div class="page-header">
+          <h1>Repositorios</h1>
+        </div>
+		<div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Get Repositorio</h3>
+              </div>
+              <div class="panel-body">
+                 <span id="get_repo_result"></span>
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-lg btn-success" id="button_get_repositorio">Get Repositorio</button>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon">Nombre</span> 
+              <input type="text" class="form-control" id="repository_name">
+            </div>
+          </div>
+        </div>
+	
+		<br>
+		
+		
+        <div class="row">
+			 <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Listar Repositorios</h3>
+              </div>
+              <div class="panel-body">
+                 <span id="get_repositorios"></span>
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-lg btn-success" id="button_list_repositorio">Get Repositorios</button>
+          </div>
+        </div>
+	
+		<br>
+	
+	
+			<div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Repositorios paginados</h3>
+              </div>
+              <div class="panel-body">
+                 <span id="pag_repositorio"></span>
+              </div>
+            </div>
+		</div><!-- /.col-sm-8 -->
+		    <div class="col-sm-4">
+            <button type="button" class="btn btn-lg btn-success" id="button_pagRepo">Número de Páginas </button>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon">Página</span> 
+              <input type="text" class="form-control" id="page">
+            </div>
+	            <div class="input-group input-group-sm">
+              <span class="input-group-addon">Número de respos por página</span> 
+              <input type="text" class="form-control" id="per_page">
+		 </div>
+        </div>
+	 </div>
+		<br>
+	
+	
+	
+	
+	
+	<div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Crea un nuevo Repositorio</h3>
+              </div>
+              <div class="panel-body">
+
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Nombre</span> <input type="text"
+                    class="form-control" id="nombre_repositorio">
+                </div>
+
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Descripcion</span> <input
+                    type="text" class="form-control" id="description_new">
+                </div>
+
+                <span id="crate_repo"></span>
+
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+             <button type="button" class="btn btn-lg btn-primary" id="button_crear_repo">Crear Repositorio</button>
+          </div>
+        </div>
+		
+		<br>
+	
+		
+		
+		
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Edita un Repositorio</h3>
+              </div>
+              <div class="panel-body">
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Nombre</span> <input type="textbox" class="form-control" id="nombre_editado">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Descripcion</span> <input type="textbox" class="form-control" id="descripcion_editada">
+                </div>
+
+                <span id="update_repositorio"></span>
+
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-lg btn-warning" id="button_Edit">Editar Repositorio</button>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon">Nombre</span> 
+              <input type="text" class="form-control" id="respositorio_editar">
+            </div>
+            <button type="button" class="btn btn-lg btn-primary" id="button_editar_repo">Guardar Repositorio</button>
+          </div>
+        </div>
+		
+		<br>
+		
+	
+		<div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Borra un Repositorio</h3>
+              </div>
+              <div class="panel-body">
+                 <span id="borrar_repo"></span>
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-lg btn-danger" href="#" class="icon-trash icon-white" id="button_deleteRepo">Borrar Repositorio</button>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon">Nombre</span> 
+              <input type="text" class="form-control" id="Repositorio_del">
+            </div>
+          </div>
+        </div>
+		
+
+		
+		
+	
+	</div>
+	
+	
+
+		
+		
+		
+		
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+      <!-- Event and AJAX functions -->
+      <script type="text/javascript" src="GithubAPI.js"></script>
+    </body>
+  </html>
+
+		
